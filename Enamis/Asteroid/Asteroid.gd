@@ -29,9 +29,16 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
+	 #движение с коллизией, если она есть то корабль уничтожается
 	var collision = move_and_collide(velocity * delta)
 	if collision:
 		velocity = velocity.bounce(collision.normal)
 		if collision.collider.name == "Player":
 			collision.collider.take_damage(takedamage)
 			print("take_damage")
+
+	# проверка на конец карты, переносится на противоложную сторону
+	if self.position.x <= -9000 or self.position.x >= 9000:
+		self.position.x *= -1
+	if self.position.y <= -9000 or self.position.y >= 9000:
+		self.position.y *= -1

@@ -9,8 +9,8 @@ var array = []
 func _ready():
 	for i in range(0,100):
 		var asteroid = load("res://Enamis/Asteroid/Asteroid.tscn").instance()
-		pointposition.x = float(rnd.randi_range(-5000,5000))
-		pointposition.y = float(rnd.randi_range(-5000,5000))
+		pointposition.x = float(rnd.randi_range(-9000,9000))
+		pointposition.y = float(rnd.randi_range(-9000,9000))
 		asteroid.position = pointposition
 		add_child(asteroid)
 

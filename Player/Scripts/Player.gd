@@ -50,3 +50,9 @@ func _physics_process(delta):
 	rotation += rotation_dir * rotation_speed * delta
 	velocity = move_and_slide(velocity)
 	
+	# проверка на конец карты, переносится на противоложную сторону
+	if self.position.x <= -9000 or self.position.x >= 9000:
+		self.position.x *= -1
+	if self.position.y <= -9000 or self.position.y >= 9000:
+		self.position.y *= -1
+	
