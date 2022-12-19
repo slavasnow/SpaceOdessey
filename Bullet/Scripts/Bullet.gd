@@ -27,4 +27,7 @@ func _process(delta):
 		_fire_bullet()
 		
 		queue_free()
-		
+
+#проверка выхода за экран, если выйдет за экран то удалится
+func _on_VisibilityNotifier2D_screen_exited():
+	queue_free()

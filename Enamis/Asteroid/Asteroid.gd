@@ -32,15 +32,6 @@ func _physics_process(delta):
 	var collision = move_and_collide(velocity * delta)
 	if collision:
 		velocity = velocity.bounce(collision.normal)
-#		if collision.collider.name == "Player":
-#			collision.collider.take_damage(takedamage)
-#			print("take_damage")
-	
-	# что ниже можно удалить потом
-	
-#	move_and_slide(Vector2(0, 1 * speed).rotated(float(r)))
-#	for i in get_slide_count():
-#		var collision = get_slide_collision(i)
-#		if collision.collider.name == "Player":
-#			print("I collided with ", collision.collider.name)
-	#pass
+		if collision.collider.name == "Player":
+			collision.collider.take_damage(takedamage)
+			print("take_damage")
