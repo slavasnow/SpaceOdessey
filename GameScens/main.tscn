@@ -1,8 +1,13 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://ather/Mulish-BoldItalic.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://stars_texture.png" type="Texture" id=3]
 [ext_resource path="res://ather/main.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 60
+font_data = ExtResource( 2 )
 
 [node name="main" type="Node2D"]
 script = ExtResource( 4 )
@@ -11,4 +16,19 @@ script = ExtResource( 4 )
 scale = Vector2( 10, 10 )
 texture = ExtResource( 3 )
 
+[node name="HUD Layer" type="CanvasLayer" parent="."]
+
+[node name="Coins" type="Label" parent="HUD Layer"]
+margin_left = 418.0
+margin_top = 5.0
+margin_right = 508.0
+margin_bottom = 194.0
+custom_fonts/font = SubResource( 1 )
+text = "0"
+
 [node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( -1, -1 )
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+current = true
+zoom = Vector2( 2, 2 )

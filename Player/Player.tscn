@@ -104,7 +104,3 @@ scale = Vector2( 0.7875, 1 )
 frames = SubResource( 3 )
 
 [node name="Cooldown" type="Timer" parent="Big_Gun"]
-
-[node name="Camera2D" type="Camera2D" parent="."]
-current = true
-zoom = Vector2( 1.5, 1.5 )
