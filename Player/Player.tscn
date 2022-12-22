@@ -51,6 +51,7 @@ position = Vector2( -32, 125 )
 rotation = 0.696052
 scale = Vector2( 1.30658, 1.30686 )
 frames = SubResource( 1 )
+frame = 1
 playing = true
 
 [node name="Engine_2" type="AnimatedSprite" parent="Body"]
@@ -58,6 +59,7 @@ position = Vector2( 32, 124 )
 rotation = -0.810041
 scale = Vector2( 1.30658, 1.30686 )
 frames = SubResource( 1 )
+frame = 1
 playing = true
 
 [node name="Small_Gun_1" type="Sprite" parent="."]
