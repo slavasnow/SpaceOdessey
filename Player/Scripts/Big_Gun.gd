@@ -1,10 +1,11 @@
 extends Sprite
 
-export var cooldown = 10
+export var cooldown = 5
 export (float) var damage = 5.0
 var rotate_speed = .005
 #функиция стрельбы
 func get_fire():
+	if $Cooldown.is_stopped():
 		var bullet = preload("res://Bullet/Bullet.tscn").instance()
 		#Получение глобальной позиции точкии передача пуле
 		var transformPoint = $Point_Bullet.global_transform
@@ -15,6 +16,7 @@ func get_fire():
 		$Point_Bullet/Fire.frame = 0
 		$Point_Bullet/Fire.play("default")
 #		$Gun/Sfire.play()
+		$Cooldown.start(cooldown)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -23,3 +25,6 @@ func _process(delta):
 	var r = global_rotation
 	
 	global_rotation = lerp_angle(r, angle, rotate_speed)
+	
+	#пример вывода числа с 1 цифорой после запятой
+	#print("%.1f" % $Cooldown.time_left)

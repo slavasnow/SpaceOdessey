@@ -26,6 +26,10 @@ margin_bottom = 194.0
 custom_fonts/font = SubResource( 1 )
 text = "0"
 
+[node name="Big_Gun" type="Sprite" parent="HUD Layer"]
+
+[node name="Small_Gun" type="Sprite" parent="HUD Layer"]
+
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( -1, -1 )
 

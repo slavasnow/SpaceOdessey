@@ -51,7 +51,6 @@ position = Vector2( -32, 125 )
 rotation = 0.696052
 scale = Vector2( 1.30658, 1.30686 )
 frames = SubResource( 1 )
-frame = 1
 playing = true
 
 [node name="Engine_2" type="AnimatedSprite" parent="Body"]
@@ -59,7 +58,6 @@ position = Vector2( 32, 124 )
 rotation = -0.810041
 scale = Vector2( 1.30658, 1.30686 )
 frames = SubResource( 1 )
-frame = 1
 playing = true
 
 [node name="Small_Gun_1" type="Sprite" parent="."]
@@ -75,6 +73,7 @@ scale = Vector2( 0.7875, 1 )
 frames = SubResource( 3 )
 
 [node name="Cooldown" type="Timer" parent="Small_Gun_1"]
+one_shot = true
 
 [node name="Small_Gun_2" type="Sprite" parent="."]
 position = Vector2( 1, -35 )
@@ -89,6 +88,7 @@ scale = Vector2( 0.7875, 1 )
 frames = SubResource( 3 )
 
 [node name="Cooldown" type="Timer" parent="Small_Gun_2"]
+one_shot = true
 
 [node name="Big_Gun" type="Sprite" parent="."]
 position = Vector2( 2, 13 )
@@ -104,3 +104,4 @@ scale = Vector2( 0.7875, 1 )
 frames = SubResource( 3 )
 
 [node name="Cooldown" type="Timer" parent="Big_Gun"]
+one_shot = true
