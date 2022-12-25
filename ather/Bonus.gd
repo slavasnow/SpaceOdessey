@@ -10,7 +10,6 @@ var x = false
 func _ready():
 	rnd.randomize()
 	bonus = rnd.randi() % 3
-	print(bonus)
 	
 	if bonus == 0:
 		bonus_0()
