@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ville_seppanen-1_g.mp3-0c8537eeb01ba182a72265e73e506104.mp3str"
+
+[deps]
+
+source_file="res://ather/ville_seppanen-1_g.mp3"
+dest_files=[ "res://.import/ville_seppanen-1_g.mp3-0c8537eeb01ba182a72265e73e506104.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

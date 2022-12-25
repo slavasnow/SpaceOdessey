@@ -1,7 +1,7 @@
 extends Sprite
 
-var cooldown = 2
-export (float) var damage = 3.0
+var cooldown = 1.0
+export (float) var damage = 10.0
 var rotate_speed = .05
 
 #функиция стрельбы
@@ -12,6 +12,8 @@ func get_fire():
 		var transformPoint = $Point_Bullet.global_transform
 		bullet.transform = transformPoint
 		bullet.damage = damage
+		#Звук выстрела
+		$AudioShoot.play()
 		#Появление на главной ноде пули
 		get_node("/root/main").add_child(bullet)
 		#Анимация выстрела

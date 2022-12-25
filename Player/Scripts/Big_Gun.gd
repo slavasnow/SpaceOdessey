@@ -1,20 +1,23 @@
 extends Sprite
 
-export var cooldown = 5
-export (float) var damage = 5.0
+export (float) var cooldown = 5
+export (float) var damage = 100.0
 var rotate_speed = .005
 #функиция стрельбы
 func get_fire():
 	if $Cooldown.is_stopped():
-		var bullet = preload("res://Bullet/Bullet.tscn").instance()
+		var bullet = preload("res://Bullet/Blaster.tscn").instance()
 		#Получение глобальной позиции точкии передача пуле
 		var transformPoint = $Point_Bullet.global_transform
 		bullet.transform = transformPoint
 		bullet.damage = damage
+		#Звук выстрела
+		$AudioShoot.play()
+
 		get_node("/root/main").add_child(bullet)
 		#Анимация выстрела
 		$Point_Bullet/Fire.frame = 0
-		$Point_Bullet/Fire.play("default")
+		$Point_Bullet/Fire.play("Blaster")
 #		$Gun/Sfire.play()
 		$Cooldown.start(cooldown)
 

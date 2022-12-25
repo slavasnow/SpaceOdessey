@@ -3,6 +3,7 @@ extends KinematicBody2D
 var velocity = Vector2()
 var speed = 1000
 var damage
+var LIVETIME = 2.0
 
 # Появление анимации взрыва пули
 func _fire_bullet():
@@ -14,20 +15,18 @@ func _fire_bullet():
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
-	
+	$Time_to_live.start(LIVETIME)
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	velocity = move_and_slide(Vector2(speed * 1,0).rotated(self.global_rotation))
+
 	for index in get_slide_count():
 		var collision = get_slide_collision(index)
 		var body = collision.collider
 		body.take_damage(damage)
-
 		_fire_bullet()
-		
 		queue_free()
-
-#проверка выхода за экран, если выйдет за экран то удалится
-func _on_VisibilityNotifier2D_screen_exited():
-	queue_free()
+	
+	if $Time_to_live.time_left == 0:
+		queue_free()

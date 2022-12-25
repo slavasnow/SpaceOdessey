@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/ObservingTheStar.ogg-9049d1ddd8db679bebf2e55a47afdae6.oggstr"
+
+[deps]
+
+source_file="res://ather/ObservingTheStar.ogg"
+dest_files=[ "res://.import/ObservingTheStar.ogg-9049d1ddd8db679bebf2e55a47afdae6.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

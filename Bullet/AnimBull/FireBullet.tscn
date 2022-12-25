@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Bullet/AnimBull/turret_05_explosion.png" type="Texture" id=1]
 [ext_resource path="res://Bullet/AnimBull/turret_02_explosion.png" type="Texture" id=2]
 [ext_resource path="res://Bullet/AnimBull/turret_03_explosion.png" type="Texture" id=3]
 [ext_resource path="res://Bullet/AnimBull/turret_04_explosion.png" type="Texture" id=4]
 [ext_resource path="res://Bullet/AnimBull/turret_01_explosion.png" type="Texture" id=5]
+[ext_resource path="res://Bullet/AnimBull/FireBullet.gd" type="Script" id=6]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -16,3 +17,6 @@ animations = [ {
 
 [node name="FireBullet" type="AnimatedSprite"]
 frames = SubResource( 1 )
+script = ExtResource( 6 )
+
+[connection signal="animation_finished" from="." to="." method="_on_FireBullet_animation_finished"]
