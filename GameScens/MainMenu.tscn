@@ -29,9 +29,9 @@ texture = ExtResource( 3 )
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -504.0
-margin_top = 120.0
+margin_top = 160.0
 margin_right = 496.0
-margin_bottom = 246.0
+margin_bottom = 286.0
 custom_fonts/font = SubResource( 1 )
 text = "Космическая Одесея"
 
