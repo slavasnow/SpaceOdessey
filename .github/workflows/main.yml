@@ -1,9 +1,6 @@
 name: Bild_Godot_Web
-on: 
-  push:
-   branches: 
-    - master
-    - master_rus
+on: [push]
+
 jobs:
   build:
     runs-on: ubuntu-20.04
