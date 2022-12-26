@@ -10,20 +10,21 @@
 [ext_resource path="res://ather/ObservingTheStar.ogg" type="AudioStream" id=8]
 [ext_resource path="res://ather/metalPanel_redCorner.png" type="Texture" id=9]
 
-[sub_resource type="DynamicFont" id=1]
-size = 60
-font_data = ExtResource( 2 )
-
-[sub_resource type="DynamicFont" id=2]
-size = 40
-font_data = ExtResource( 2 )
-
 [sub_resource type="DynamicFont" id=3]
 size = 100
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=4]
 size = 40
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 60
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+outline_size = 4
 font_data = ExtResource( 2 )
 
 [sub_resource type="Shader" id=5]
@@ -40,8 +41,48 @@ texture = ExtResource( 3 )
 
 [node name="HUD_Layer" type="CanvasLayer" parent="."]
 
+[node name="GameOver" type="Sprite" parent="HUD_Layer"]
+visible = false
+position = Vector2( 564, 223 )
+
+[node name="Lable" type="Label" parent="HUD_Layer/GameOver"]
+anchor_left = 0.5
+anchor_top = 63.0
+anchor_right = 0.5
+anchor_bottom = 63.0
+margin_left = -378.0
+margin_top = -63.0
+margin_right = 378.0
+margin_bottom = 63.0
+custom_fonts/font = SubResource( 3 )
+text = "Игра окончена"
+
+[node name="Button" type="Button" parent="HUD_Layer/GameOver"]
+anchor_left = 173.0
+anchor_top = 155.5
+anchor_right = 173.0
+anchor_bottom = 155.5
+margin_left = -125.0
+margin_top = -28.5
+margin_right = 125.0
+margin_bottom = 28.5
+custom_fonts/font = SubResource( 4 )
+text = "Переиграть"
+
+[node name="Score" type="Label" parent="HUD_Layer/GameOver"]
+anchor_left = -234.16
+anchor_top = 163.0
+anchor_right = -234.16
+anchor_bottom = 163.0
+margin_left = -81.84
+margin_top = -33.0
+margin_right = 168.16
+margin_bottom = 43.0
+custom_fonts/font = SubResource( 1 )
+text = "0"
+
 [node name="BG_Coins" type="Sprite" parent="HUD_Layer"]
-position = Vector2( 948, 54 )
+position = Vector2( 954, 55 )
 texture = ExtResource( 9 )
 
 [node name="Coins" type="Label" parent="HUD_Layer/BG_Coins"]
@@ -68,6 +109,7 @@ margin_left = -35.0
 margin_top = -10.0
 margin_right = 22.0
 margin_bottom = 41.0
+input_pass_on_modal_close_click = false
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 2 )
 align = 1
@@ -91,37 +133,9 @@ margin_bottom = 42.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 2 )
 
-[node name="GameOver" type="Sprite" parent="HUD_Layer"]
-visible = false
-position = Vector2( 564, 223 )
-
-[node name="Lable" type="Label" parent="HUD_Layer/GameOver"]
-margin_left = -302.0
-margin_top = -20.0
-margin_right = 233.0
-margin_bottom = 106.0
-custom_fonts/font = SubResource( 3 )
-text = "Game Over"
-
-[node name="Button" type="Button" parent="HUD_Layer/GameOver"]
-margin_left = -126.0
-margin_top = 140.0
-margin_right = 124.0
-margin_bottom = 197.0
-custom_fonts/font = SubResource( 4 )
-text = "Restart"
-
-[node name="Score" type="Label" parent="HUD_Layer/GameOver"]
-margin_left = -341.0
-margin_top = 125.0
-margin_right = -91.0
-margin_bottom = 201.0
-custom_fonts/font = SubResource( 1 )
-text = "0"
-
 [node name="Bonus" type="Sprite" parent="HUD_Layer"]
 material = SubResource( 6 )
-position = Vector2( 512, 54 )
+position = Vector2( 307, 53 )
 texture = ExtResource( 5 )
 
 [node name="Label" type="Label" parent="HUD_Layer/Bonus"]

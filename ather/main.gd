@@ -77,10 +77,18 @@ func _game_over():
 	cursor = preload("res://ather/cursor_pointerFlat.png")
 	Input.set_custom_mouse_cursor(cursor)
 
+#функция выхода
+func _exit_game():
+	if Input.is_action_just_pressed("exit"):
+		get_tree().quit()
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+
+	#_exit_game()
 
 	if find_node("Player"):
 		cooldown_in_text()
 	else:
 		_game_over()
+
