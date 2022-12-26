@@ -1,0 +1,24 @@
+name: Bild_Godot_Web
+on:
+  push:
+    branches:
+    - master
+    #- master_rus
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    
+    steps:
+    - uses: actions/checkout@v2
+    - uses: vitorgus/setup-godot@v1
+      with:
+        godot-version: 3.5.1
+    - name: Web Build
+      run: |
+        mkdir -v -p build/web
+        godot -v --export "HTML5" ./build/web/index.html
+    - uses: actions/upload-artifact@v3
+      with:
+        name: web
+        path: build/web
