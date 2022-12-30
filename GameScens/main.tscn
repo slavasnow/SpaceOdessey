@@ -41,113 +41,160 @@ texture = ExtResource( 3 )
 
 [node name="HUD_Layer" type="CanvasLayer" parent="."]
 
-[node name="GameOver" type="Sprite" parent="HUD_Layer"]
+[node name="GameOver" type="TextureRect" parent="HUD_Layer"]
 visible = false
-position = Vector2( 564, 223 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -3.0
+margin_right = -3.0
 
 [node name="Lable" type="Label" parent="HUD_Layer/GameOver"]
-anchor_left = 0.5
-anchor_top = 63.0
-anchor_right = 0.5
-anchor_bottom = 63.0
-margin_left = -378.0
-margin_top = -63.0
-margin_right = 378.0
-margin_bottom = 63.0
+anchor_left = 0.428
+anchor_top = 0.352
+anchor_right = 0.428
+anchor_bottom = 0.352
+margin_left = -378.272
+margin_top = -63.2
+margin_right = 377.728
+margin_bottom = 62.8
 custom_fonts/font = SubResource( 3 )
 text = "Игра окончена"
 
 [node name="Button" type="Button" parent="HUD_Layer/GameOver"]
-anchor_left = 173.0
-anchor_top = 155.5
-anchor_right = 173.0
-anchor_bottom = 155.5
-margin_left = -125.0
-margin_top = -28.5
-margin_right = 125.0
-margin_bottom = 28.5
+anchor_left = 0.527
+anchor_top = 0.602
+anchor_right = 0.527
+anchor_bottom = 0.602
+margin_left = -124.648
+margin_top = -28.2
+margin_right = 125.352
+margin_bottom = 28.8
 custom_fonts/font = SubResource( 4 )
 text = "Переиграть"
 
 [node name="Score" type="Label" parent="HUD_Layer/GameOver"]
-anchor_left = -234.16
-anchor_top = 163.0
-anchor_right = -234.16
-anchor_bottom = 163.0
-margin_left = -81.84
-margin_top = -33.0
-margin_right = 168.16
-margin_bottom = 43.0
+anchor_left = 0.243
+anchor_top = 0.6
+anchor_right = 0.243
+anchor_bottom = 0.6
+margin_left = -124.832
+margin_top = -38.0
+margin_right = 125.168
+margin_bottom = 38.0
 custom_fonts/font = SubResource( 1 )
 text = "0"
 
-[node name="BG_Coins" type="Sprite" parent="HUD_Layer"]
-position = Vector2( 954, 55 )
+[node name="BG_Coins" type="TextureRect" parent="HUD_Layer"]
+anchor_left = 0.934
+anchor_top = 0.098
+anchor_right = 0.934
+anchor_bottom = 0.098
+margin_left = -50.416
+margin_top = -49.8
+margin_right = 49.584
+margin_bottom = 50.2
 texture = ExtResource( 9 )
 
 [node name="Coins" type="Label" parent="HUD_Layer/BG_Coins"]
-margin_left = -29.0
-margin_top = -35.0
-margin_right = 17.0
-margin_bottom = 41.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -38.0
+margin_right = 26.0
+margin_bottom = 38.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "0"
 
-[node name="Big_Gun" type="Sprite" parent="HUD_Layer"]
-position = Vector2( 180, 51 )
+[node name="Big_Gun" type="TextureRect" parent="HUD_Layer"]
+anchor_left = 0.2
+anchor_top = 0.1
+anchor_right = 0.2
+anchor_bottom = 0.1
+margin_left = -49.8
+margin_top = -50.0
+margin_right = 50.2
+margin_bottom = 50.0
 texture = ExtResource( 5 )
 
 [node name="Icon" type="Sprite" parent="HUD_Layer/Big_Gun"]
-position = Vector2( 3, 10 )
+position = Vector2( 55, 62 )
 rotation = -0.612611
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 7 )
 
 [node name="Label" type="Label" parent="HUD_Layer/Big_Gun"]
-margin_left = -35.0
-margin_top = -10.0
-margin_right = 22.0
-margin_bottom = 41.0
+anchor_left = 0.5
+anchor_top = 0.615
+anchor_right = 0.5
+anchor_bottom = 0.615
+margin_left = -29.0
+margin_top = -25.5
+margin_right = 28.0
+margin_bottom = 25.5
 input_pass_on_modal_close_click = false
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 2 )
 align = 1
 valign = 1
 
-[node name="Small_Gun" type="Sprite" parent="HUD_Layer"]
-position = Vector2( 60, 50 )
+[node name="Small_Gun" type="TextureRect" parent="HUD_Layer"]
+anchor_left = 0.069
+anchor_top = 0.102
+anchor_right = 0.069
+anchor_bottom = 0.102
+margin_left = -49.656
+margin_top = -50.2
+margin_right = 50.344
+margin_bottom = 49.8
 texture = ExtResource( 5 )
 
 [node name="Icon" type="Sprite" parent="HUD_Layer/Small_Gun"]
-position = Vector2( 0, 15 )
+position = Vector2( 51, 57 )
 rotation = -0.612611
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 6 )
 
 [node name="Label" type="Label" parent="HUD_Layer/Small_Gun"]
-margin_left = -37.0
-margin_top = -9.0
-margin_right = 20.0
-margin_bottom = 42.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -29.0
+margin_top = -19.0
+margin_right = 28.0
+margin_bottom = 32.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 2 )
 
-[node name="Bonus" type="Sprite" parent="HUD_Layer"]
+[node name="Bonus" type="TextureRect" parent="HUD_Layer"]
 material = SubResource( 6 )
-position = Vector2( 307, 53 )
+anchor_left = 0.325
+anchor_top = 0.1
+anchor_right = 0.325
+anchor_bottom = 0.1
+margin_left = -49.8
+margin_top = -50.0
+margin_right = 50.2
+margin_bottom = 50.0
 texture = ExtResource( 5 )
 
 [node name="Label" type="Label" parent="HUD_Layer/Bonus"]
-margin_left = -27.0
-margin_top = -14.0
-margin_right = 30.0
-margin_bottom = 37.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -28.0
+margin_top = -18.0
+margin_right = 29.0
+margin_bottom = 33.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 2 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( -1, -1 )
+position = Vector2( -200, -79 )
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 current = true

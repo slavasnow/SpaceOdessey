@@ -27,19 +27,25 @@ texture = ExtResource( 3 )
 
 [node name="Label" type="Label" parent="."]
 anchor_left = 0.5
+anchor_top = 0.372
 anchor_right = 0.5
+anchor_bottom = 0.372
 margin_left = -504.0
-margin_top = 160.0
+margin_top = -63.2
 margin_right = 496.0
-margin_bottom = 286.0
+margin_bottom = 62.8
 custom_fonts/font = SubResource( 1 )
 text = "Космическая Одесея"
 
 [node name="Button" type="Button" parent="."]
-margin_left = 448.0
-margin_top = 384.0
-margin_right = 994.0
-margin_bottom = 504.0
+anchor_left = 0.719
+anchor_top = 0.747
+anchor_right = 0.719
+anchor_bottom = 0.747
+margin_left = -288.256
+margin_top = -64.2
+margin_right = 257.744
+margin_bottom = 55.8
 custom_fonts/font = SubResource( 2 )
 text = "Новая Игра"
 

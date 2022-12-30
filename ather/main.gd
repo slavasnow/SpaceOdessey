@@ -1,5 +1,8 @@
 extends Node2D
 
+var _callback = JavaScript.create_callback(self, "on_get")
+var console
+
 var coins = 0
 var asterMax = 200
 var lvl = 1 #множитель скорости
@@ -9,6 +12,8 @@ var rnd = RandomNumberGenerator.new()
 var cursor = load("res://Player/HUD/crossair_red.png")
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	console = JavaScript.get_interface("window")
+
 	rnd.randomize()
 	Input.set_custom_mouse_cursor(cursor)
 
@@ -65,6 +70,7 @@ func _on_Button_pressed():
 	get_tree().reload_current_scene()
 
 func _game_over():
+
 	#показ финального меню
 	$HUD_Layer/GameOver.visible = true
 	$HUD_Layer/GameOver/Score.text = $HUD_Layer/BG_Coins/Coins.text
@@ -91,4 +97,8 @@ func _process(delta):
 		cooldown_in_text()
 	else:
 		_game_over()
+		#Вызов рекламы
+		console.ShowAdv()
 
+func _on_get(args):
+	OS.alert("On Get")
