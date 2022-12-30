@@ -36,7 +36,7 @@ shader = SubResource( 5 )
 script = ExtResource( 4 )
 
 [node name="Space" type="Sprite" parent="."]
-scale = Vector2( 10, 10 )
+scale = Vector2( 20, 20 )
 texture = ExtResource( 3 )
 
 [node name="HUD_Layer" type="CanvasLayer" parent="."]

@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 var hp = 100
 var takedamage = 20
-export (float) var speed = 150
+export (float) var speed = 200
 var r = 0
 var damage
 var velocity
