@@ -3,7 +3,8 @@ extends Node2D
 var _callback = JavaScript.create_callback(self, "on_get")
 var console
 
-var coins = 0
+var coins = 0 # обычные очки
+var maxcoins # рекорд 
 var asterMax = 200
 var lvl = 1 #множитель скорости
 var pointposition = Vector2()
@@ -74,6 +75,16 @@ func _game_over():
 	#показ финального меню
 	$HUD_Layer/GameOver.visible = true
 	$HUD_Layer/GameOver/Score.text = $HUD_Layer/BG_Coins/Coins.text
+	
+	maxcoins = int(console.data())
+	if (maxcoins < coins):
+		maxcoins = coins
+	
+	console.savedata(maxcoins)
+
+	$HUD_Layer/GameOver/HightScore.text = console.data()
+	#console.savedata(maxcoins) # Сохрание результата в хранилище браузера
+
 	#скрытие лишнего
 	$HUD_Layer/Big_Gun.visible = false
 	$HUD_Layer/Small_Gun.visible = false
@@ -99,6 +110,19 @@ func _process(delta):
 		_game_over()
 		#Вызов рекламы
 		console.ShowAdv()
+	#проверка на скрытие и закрытие окна
+	var ch = console.CheckHidden()
+	if ch == false:
+		$BGMusic.volume_db = -80
+	else:
+		$BGMusic.volume_db = 0
+	var cv = console.CheckVisible()	
+	if cv == false:
+		$BGMusic.volume_db = -80
+	else:
+		$BGMusic.volume_db = 0
 
 func _on_get(args):
 	OS.alert("On Get")
+
+

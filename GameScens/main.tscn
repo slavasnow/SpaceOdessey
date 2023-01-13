@@ -50,37 +50,77 @@ margin_right = -3.0
 
 [node name="Lable" type="Label" parent="HUD_Layer/GameOver"]
 anchor_left = 0.428
-anchor_top = 0.352
+anchor_top = 0.247
 anchor_right = 0.428
-anchor_bottom = 0.352
-margin_left = -378.272
-margin_top = -63.2
-margin_right = 377.728
-margin_bottom = 62.8
+anchor_bottom = 0.247
+margin_left = -409.272
+margin_top = -137.2
+margin_right = 346.728
+margin_bottom = -11.2
 custom_fonts/font = SubResource( 3 )
 text = "Игра окончена"
 
 [node name="Button" type="Button" parent="HUD_Layer/GameOver"]
-anchor_left = 0.527
-anchor_top = 0.602
-anchor_right = 0.527
-anchor_bottom = 0.602
-margin_left = -124.648
-margin_top = -28.2
-margin_right = 125.352
-margin_bottom = 28.8
+anchor_left = 0.661
+anchor_top = 0.774
+anchor_right = 0.661
+anchor_bottom = 0.774
+margin_left = -124.864
+margin_top = -28.4
+margin_right = 125.136
+margin_bottom = 28.6
 custom_fonts/font = SubResource( 4 )
 text = "Переиграть"
 
-[node name="Score" type="Label" parent="HUD_Layer/GameOver"]
-anchor_left = 0.243
-anchor_top = 0.6
-anchor_right = 0.243
-anchor_bottom = 0.6
-margin_left = -124.832
+[node name="HightScoreLable" type="Label" parent="HUD_Layer/GameOver"]
+anchor_left = 0.377
+anchor_top = 0.273
+anchor_right = 0.377
+anchor_bottom = 0.273
+margin_left = -279.048
+margin_top = -37.8
+margin_right = 279.952
+margin_bottom = 38.2
+rect_pivot_offset = Vector2( -892, -574 )
+custom_fonts/font = SubResource( 1 )
+text = "Лучший результат"
+
+[node name="HightScore" type="Label" parent="HUD_Layer/GameOver"]
+anchor_left = 0.37
+anchor_top = 0.412
+anchor_right = 0.37
+anchor_bottom = 0.412
+margin_left = -124.88
+margin_top = -38.2
+margin_right = 125.12
+margin_bottom = 37.8
+rect_pivot_offset = Vector2( -892, -574 )
+custom_fonts/font = SubResource( 1 )
+text = "0"
+
+[node name="ScoreLable" type="Label" parent="HUD_Layer/GameOver"]
+anchor_left = 0.39
+anchor_top = 0.57
+anchor_right = 0.39
+anchor_bottom = 0.57
+margin_left = -292.36
 margin_top = -38.0
-margin_right = 125.168
+margin_right = 266.64
 margin_bottom = 38.0
+rect_pivot_offset = Vector2( -892, -574 )
+custom_fonts/font = SubResource( 1 )
+text = "Текущий результат"
+
+[node name="Score" type="Label" parent="HUD_Layer/GameOver"]
+anchor_left = 0.358
+anchor_top = 0.757
+anchor_right = 0.358
+anchor_bottom = 0.757
+margin_left = -124.592
+margin_top = -38.2
+margin_right = 125.408
+margin_bottom = 37.8
+rect_pivot_offset = Vector2( -892, -574 )
 custom_fonts/font = SubResource( 1 )
 text = "0"
 
@@ -202,6 +242,5 @@ zoom = Vector2( 2, 2 )
 
 [node name="BGMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 8 )
-autoplay = true
 
 [connection signal="pressed" from="HUD_Layer/GameOver/Button" to="." method="_on_Button_pressed"]

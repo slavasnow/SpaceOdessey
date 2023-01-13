@@ -32,10 +32,10 @@ anchor_right = 0.5
 anchor_bottom = 0.372
 margin_left = -504.0
 margin_top = -63.2
-margin_right = 496.0
-margin_bottom = 62.8
+margin_right = 539.0
+margin_bottom = 64.8
 custom_fonts/font = SubResource( 1 )
-text = "Космическая Одесея"
+text = "Космическая Одиссея"
 
 [node name="Button" type="Button" parent="."]
 anchor_left = 0.719
@@ -51,6 +51,5 @@ text = "Новая Игра"
 
 [node name="BGMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
-autoplay = true
 
 [connection signal="button_up" from="Button" to="." method="_on_Button_button_up"]

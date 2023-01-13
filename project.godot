@@ -20,10 +20,15 @@ _global_script_class_icons={
 
 [application]
 
-config/name="SpaseOdessey"
+config/name="SpaceBattle"
 run/main_scene="res://GameScens/MainMenu.tscn"
+boot_splash/image="res://stars_texture.png"
 boot_splash/bg_color=Color( 0.141176, 0.141176, 0.141176, 1 )
 config/icon="res://icon.png"
+
+[display]
+
+window/size/resizable=false
 
 [editor]
 
