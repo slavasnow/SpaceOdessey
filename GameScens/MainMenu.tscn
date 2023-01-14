@@ -6,7 +6,7 @@
 [ext_resource path="res://ather/ville_seppanen-1_g.mp3" type="AudioStream" id=4]
 
 [sub_resource type="DynamicFont" id=1]
-size = 94
+size = 91
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=2]
@@ -32,7 +32,7 @@ anchor_right = 0.5
 anchor_bottom = 0.372
 margin_left = -504.0
 margin_top = -63.2
-margin_right = 539.0
+margin_right = 504.0
 margin_bottom = 64.8
 custom_fonts/font = SubResource( 1 )
 text = "Космическая Одиссея"
